@@ -2,73 +2,38 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Tableau de Bord SolarEdge</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 40px;
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background-color: white;
-      border-radius: 12px;
-      padding: 30px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 24px;
-      font-size: 15px;
-      color: #fff;
-      background-color: #0078D7;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background-color 0.3s;
-    }
-
-    .button:hover {
-      background-color: #005fa3;
-    }
-  </style>
+  <title>Ouvrir plusieurs onglets</title>
 </head>
-<body>
-  <h1>Tableau de Bord SolarEdge</h1>
-  <div class="grid">
-    <div class="card">
-      <h2>Site 3525909</h2>
-      <a class="button" href="https://monitoring.solaredge.com/solaredge-web/p/site/3525909#/layout" target="_blank">Voir le site</a>
-    </div>
-    <div class="card">
-      <h2>Site 4488219</h2>
-      <a class="button" href="https://monitoring.solaredge.com/solaredge-web/p/site/4488219#/layout" target="_blank">Voir le site</a>
-    </div>
-    <div class="card">
-      <h2>Site 4392915</h2>
-      <a class="button" href="https://monitoring.solaredge.com/solaredge-web/p/site/4392915#/layout" target="_blank">Voir le site</a>
-    </div>
-  </div>
+<body style="font-family: sans-serif; text-align: center; margin-top: 100px;">
+  <h1>Ouvrir plusieurs sites</h1>
+  <p>Clique sur le bouton ci-dessous pour ouvrir plusieurs onglets.</p>
+  <button onclick="ouvrirOnglets()" style="padding: 10px 20px; font-size: 16px;">Ouvrir les sites</button>
+
+  <script>
+    function ouvrirOnglets() {
+      const urls = [
+        'https://monitoring.solaredge.com/solaredge-web/p/site/3525909#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/4488219#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/4392915#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/3174786#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/4172494#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/4194581#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/1353387#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/4507203#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/3248241#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/4489975#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/4507183#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/3561564#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/1712996#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/3611765#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/955280#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/509326#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/1577536#/layout'
+
+      ];
+
+      urls.forEach(url => window.open(url, '_blank'));
+    }
+  </script>
 </body>
 </html>
-
