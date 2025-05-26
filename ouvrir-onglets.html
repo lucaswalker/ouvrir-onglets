@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ouvrir plusieurs onglets</title>
+</head>
+<body style="font-family: sans-serif; text-align: center; margin-top: 100px;">
+  <h1>Ouvrir plusieurs sites</h1>
+  <p>Clique sur le bouton ci-dessous pour ouvrir plusieurs onglets.</p>
+  <button onclick="ouvrirOnglets()" style="padding: 10px 20px; font-size: 16px;">Ouvrir les sites</button>
+
+  <script>
+    function ouvrirOnglets() {
+      const urls = [
+        'https://monitoring.solaredge.com/solaredge-web/p/site/3525909#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/4488219#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/4392915#/layout'
+      ];
+
+      urls.forEach(url => window.open(url, '_blank'));
+    }
+  </script>
+</body>
+</html>
