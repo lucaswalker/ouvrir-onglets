@@ -9,31 +9,54 @@
       margin: 0;
       padding: 0;
     }
+
     .container {
       display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
       min-height: 100vh;
     }
-    .left-column {
-      width: 40%;
-      padding: 20px;
+
+    .left-column,
+    .right-column {
       box-sizing: border-box;
+      padding: 20px;
+    }
+
+    .left-column {
+      flex: 1;
+      min-width: 300px;
+      max-width: 600px;
       background-color: #f5f5f5;
       border-right: 1px solid #ccc;
     }
+
     .right-column {
-      width: 60%;
-      padding: 20px;
-      box-sizing: border-box;
+      flex: 2;
+      min-width: 300px;
     }
+
     iframe {
       width: 100%;
       border: 1px solid #ccc;
       border-radius: 8px;
     }
+
     button {
       padding: 10px 20px;
       font-size: 16px;
       margin-bottom: 20px;
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left-column {
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+      }
     }
   </style>
 </head>
@@ -46,4 +69,54 @@
         src="https://liberating-browser-cc8.notion.site/ebd/1ffee2423f28805ea490f4ba698e0d21"
         height="700"
         allowfullscreen>
-      </iframe
+      </iframe>
+    </div>
+
+    <div class="right-column">
+      <h1>Tableaux de bord</h1>
+
+      <button onclick="window.open('https://uni003eu5.fusionsolar.huawei.com/uniportal/pvmsextwebsite/assets/build/cloud.html?app-id=smartpvms&instance-id=smartpvms&zone-id=region-3-19c53117-1814-4b77-9636-86e36be7664c#/operation/alarmManagement', '_blank')">
+        Ouvrir FusionSolar
+      </button>
+
+      <h3>iSolarCloud</h3>
+      <iframe
+        src="https://web3.isolarcloud.eu/#/plantList?6QW8zrf8SabcljtQhyIDUbTY40uwjpQhbEnUlqzt8Cc="
+        height="400"
+        allowfullscreen>
+      </iframe>
+
+      <hr style="margin: 40px 0;">
+
+      <h2>Ouvrir plusieurs sites SolarEdge</h2>
+      <button onclick="ouvrirOnglets()">Ouvrir les sites SolarEdge</button>
+    </div>
+  </div>
+
+  <script>
+    function ouvrirOnglets() {
+      const urls = [
+        'https://monitoring.solaredge.com/solaredge-web/p/site/3525909#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/4488219#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/4392915#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/3174786#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/4172494#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/4194581#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/1353387#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/4507203#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/3248241#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/4489975#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/4507183#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/3561564#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/1712996#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/3611765#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/955280#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/509326#/layout',
+        'https://monitoring.solaredge.com/solaredge-web/p/site/1577536#/layout'
+      ];
+      urls.forEach(url => window.open(url, '_blank'));
+    }
+  </script>
+
+</body>
+</html>
