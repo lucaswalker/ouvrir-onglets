@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <title>Ouvrir plusieurs onglets</title>
 </head>
-<body style="font-family: sans-serif; text-align: center; margin-top: 100px;">
-  <h1>Ouvrir plusieurs sites</h1>
-  <p>Clique sur le bouton ci-dessous pour ouvrir plusieurs onglets.</p>
+<body style="font-family: sans-serif; text-align: center; margin-top: 50px;">
+  <h1>Ouvrir plusieurs sites SolarEdge</h1>
+  <p>Clique sur le bouton pour ouvrir tous les agencements SolarEdge d’un coup.</p>
+
   <button onclick="ouvrirOnglets()" style="padding: 10px 20px; font-size: 16px;">Ouvrir les sites</button>
 
   <script>
@@ -29,11 +30,23 @@
         'https://monitoring.solaredge.com/solaredge-web/p/site/955280#/layout',
         'https://monitoring.solaredge.com/solaredge-web/p/site/509326#/layout',
         'https://monitoring.solaredge.com/solaredge-web/p/site/1577536#/layout'
-
       ];
 
       urls.forEach(url => window.open(url, '_blank'));
     }
   </script>
+
+  <hr style="margin: 40px 0;">
+
+  <h2>Formulaire complémentaire</h2>
+
+  <iframe
+    src="https://liberating-browser-cc8.notion.site/ebd/1ffee2423f28805ea490f4ba698e0d21"
+    width="100%"
+    height="600"
+    frameborder="0"
+    allowfullscreen
+    style="border: 1px solid #ccc; border-radius: 8px;">
+  </iframe>
 </body>
 </html>
